@@ -1,13 +1,18 @@
 ---
   const pageTitle = "About Chinoa";
   const identity = {
-    firstName: "Sarah",
-    country: "Canada",
-    occupation: "Technical Writer",
-    hobbies: ["photography", "birdwatching", "baseball"],
+    firstName: "Luis Eduardo Augusto",
+    country: "Peru",
+    occupation: "Fullstack Entrepreneur",
+    hobbies: ["graphic art", "birdwatching", "baseball"],
   };
 
   const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+
+  const happy = true;
+  const finished = false;
+  const goal = 3;
+
 ---
 
 <html lang="en">
@@ -24,9 +29,21 @@
       <a href="/blog/">Blog</a>
 
 		<h1>{pageTitle}</h1>
-    <h2>Im just a curious guy</h2>
-    <p>My name is Luis Eduardo and im a continuous learner</p>
-    <p>but not only this, this is onlye what i have to do, now how do i install
-      tailwaind for practices</p>
-	</body>
-</html>
+    <h2>My name is {identity.firstName}</h2>
+    <ul>
+      <li>My name is {identity.firstName}.</li>
+      <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
+      {identity.hobbies.length >= 2 &&
+        <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
+      }
+    </ul>
+    <p>My skills are:</p>
+    <ul>
+      {skills.map((skill) => <li>{skill}</li>)}
+    </ul>
+
+    {happy && <p>I am happy to be learning Astro!</p>}
+    {finished && <p>I finished this tutorial!</p>}
+    {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+    
+    </html>
