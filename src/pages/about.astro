@@ -1,4 +1,13 @@
 ---
+  const pageTitle = "About Chinoa";
+  const identity = {
+    firstName: "Sarah",
+    country: "Canada",
+    occupation: "Technical Writer",
+    hobbies: ["photography", "birdwatching", "baseball"],
+  };
+
+  const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
 ---
 
 <html lang="en">
@@ -7,14 +16,14 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro why</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
       <a href="/">Home</a>
       <a href="/about/">About</a>
       <a href="/blog/">Blog</a>
-      
-		<h1>About Me</h1>
+
+		<h1>{pageTitle}</h1>
     <h2>Im just a curious guy</h2>
     <p>My name is Luis Eduardo and im a continuous learner</p>
     <p>but not only this, this is onlye what i have to do, now how do i install
