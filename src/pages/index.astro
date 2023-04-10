@@ -1,25 +1,7 @@
 ---
-  import '../styles/global.css';
-  import Navigation from '../components/navigation.astro';
-
-  const pageTitle = "Home Chinoa";
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "Home Page Chinoa 21";
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro why</title>
-	</head>
-	<body>
-    <Navigation />
-
-		<h1>{pageTitle}</h1>
-    <h2>This is my astro Site</h2>
-    <p>this is my astro site tho</p>
-    <p>but not only this, this is onlye what i have to do, now how do i install
-      tailwaind for practices</p>
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+  <h2>My awesome blog subtitle 2</h2>
+</BaseLayout>
